@@ -1,0 +1,45 @@
+
+{% extends 'photo_app/base.html' %}
+
+{% block title %} Edit {% endblock %}
+
+{% block content %}
+
+<header>
+    <h1>Search for a photo to edit</h1>
+</header>
+
+<br>
+<section>
+
+    <!-- Form to search for upload based on id or name -->
+    <form method="GET">
+
+        <label for="name">Search by name (case-sensitive): </label>
+            <input type="text" class= "form-control" id="name" name="name"><br>
+
+        <label for="id">Search by photo id: </label>
+            <input type = "text" class="form-control" id="id" name="id">
+
+        <br>
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+    <br>
+    <!-- Displays error messages passed from view -->
+    {% if messages %}
+    {% for message in messages %}
+        <p class="text-danger">Error: {{ message|safe }}</p>
+
+    {% endfor %}
+    {% endif %}
+
+    <br>
+    <br>
+
+
+
+
+</section>
+
+
+{% endblock %}

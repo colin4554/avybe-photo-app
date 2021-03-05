@@ -1,0 +1,25 @@
+
+{% extends 'photo_app/base.html' %}
+
+{% block title %} Add a Photo {% endblock %}
+
+{% block content %}
+
+<header>
+    <h1>Upload a photo</h1>
+</header>
+
+<section>
+    <br><br>
+    <form method="POST", enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <!-- PhotoForm to display and save data-->
+        {{ form.as_p }}
+        <br><button type="submit" class="btn btn-primary">Submit</button>
+        <br><br>
+
+    </form>
+</section>
+
+{% endblock content %}

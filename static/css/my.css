@@ -1,0 +1,33 @@
+.photos {
+  position: relative;
+  width: 100%;
+}
+
+/* Styles the button and place it in the top right */
+
+.photos .btn {
+
+  display: none;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+
+  z-index: 1;
+
+  background-color: #555;
+  color: white;
+  font-size: 20px;
+
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+/* when user hovers over card --> display button */
+
+.card:hover .btn {
+  display: inline-block;
+}
+
+
